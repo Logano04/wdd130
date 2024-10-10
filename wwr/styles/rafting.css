@@ -74,8 +74,13 @@ p {
     font-size: 18px;
 }
 
-footer {
-    a {
-        text-decoration: none;
-    }
+section > img {
+    width: 200px;
+}
+
+footer img {
+    width: 50px;
+}
+footer a {
+    text-decoration: none;
 }
