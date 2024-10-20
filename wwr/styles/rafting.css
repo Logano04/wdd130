@@ -41,6 +41,11 @@ p {
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
+.responsive-image {
+    height: 200px;  /* Set the desired height */
+    width: auto;
+}
+
 .hero { /* Container for hero class */
     position: relative;
     width: 100%; /* Full-width container */
@@ -98,7 +103,7 @@ p {
 
 .history-content {
     display: flex;
-    justify-content: space-between; /* Ensures space between items */
+     /* Ensures space between items */
     align-items: center;
 }
 .history-content > img {
@@ -130,7 +135,7 @@ figcaption {
   }  
 
 
-/* Footer */
+/* >FOOTER */
 footer img {
     width: 50px;
 }
@@ -152,4 +157,101 @@ footer > p { /*Footer text*/
 .socials {
     padding-top: 5px;
     margin-left: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;  /* Ensure sections are side by side */
+    padding: 20px;
+    border: 2px solid black;          /* Outline for the container */
+    max-width: 800px;                /* Limit the container's width */
+    margin: 0 auto;
+}
+
+/* Styling for each section inside the container */
+.section {
+    width: 48%;                      /* Make sections equal in width */
+    padding: 20px;
+    background-color: #f4f4f4;       /* Light background for sections */
+    border: 1px solid black;          /* Border around each section */
+}
+
+/* Title styling */
+.section h2 {
+    margin-top: 0;                   /* Remove margin from the top */
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Text content styling */
+.section p {
+    font-size: 1em;
+    color: var(--primary-color);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.map > iframe{
+    width: 300px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* >FORM */
+body {
+    font-family:'PT Sans Narrow', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+}
+h2 {
+    text-align: center;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+.radio-group {
+    margin-bottom: 15px;
+}
+.radio-group label {
+    font-weight: normal;
+    margin-left: 10px;
+}
+.checkbox-group {
+    margin-bottom: 15px;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+.submit-btn:hover {
+    background-color: #45a049;
 }
