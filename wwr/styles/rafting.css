@@ -106,6 +106,8 @@ section {
 }
 
 .responsive-image {
+    aspect-ratio: 1/ 1;
+    overflow:hidden;
     height: 200px;  /* Set the desired height */
     width: auto;
 }
@@ -113,9 +115,38 @@ section {
 .hero { /* Container for hero class */
     position: relative;
     width: 100%; /* Full-width container */
-    height: 600px;
+    height: 580px;
     overflow: hidden; /* hides content that goes outside container */
-  }
+}
+
+.hero-trip { /* Container for hero class */
+    position: relative;
+    width: 100%; /* Full-width container */
+    height: 200px;
+    overflow: hidden; /* hides content that goes outside container */
+}
+  .hero-trip > img {
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image maintains its aspect ratio */
+    z-index: -1;
+}
+
+.hero-trip h1 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+}
 
 .hero > img {
     filter: blur(5px);
@@ -164,8 +195,16 @@ section {
     font-size: 18px;
 }
 
-.history-content > img {
-    width: 400px;
+.history-container {
+    text-align: center;
+    gap: 20px; /* Space between image and text */
+    max-width: 800px; /* Optional max width for layout control */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+.history-content img {
+    width: 200px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .gallery {
@@ -173,26 +212,11 @@ section {
     grid-template-columns: repeat(4, 1fr); /* Equal columns */
 }
 
-.gallery > figure {
+.gallery item{
     display: flex; /* Enable flex for centering content */
     justify-content: center; /* Center horizontally */
     align-items: center;
 }
-
-figure > img {
-    aspect-ratio: 1; /* Ensures a 1:1 aspect ratio */
-    width: 100%;     /* Makes the image fill the container width */
-    height: auto;    /* Keeps the aspect ratio of the image */
-    object-fit: cover; 
-    overflow: hidden;
-}
-
-figcaption {
-    font-family: 'PT Sans Narrow', sans-serif;
-    color: black;
-    padding: 3px;
-    text-align: center;
-  }  
 
 
 /* >FOOTER */
@@ -309,7 +333,6 @@ input[type="text"], input[type="email"], textarea {
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     text-align: center;
 }
